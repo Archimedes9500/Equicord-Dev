@@ -56,7 +56,7 @@ jobs:
                   pnpm install --frozen-lockfile --prefer-offline
 
             - name: Build Equicord Reporter Version
-              run: pnpm buildReporter
+              run: pnpm buildReporter -- --dev
 
             - name: Run Reporter
               timeout-minutes: 10
