@@ -75,7 +75,7 @@ jobs:
 
             - name: Build web
               if: steps.check.outputs.release == 'true'
-              run: pnpm buildWebStandalone
+              run: pnpm buildWebStandalone -- --dev
 
             - name: Create sources zip
               if: steps.check.outputs.release == 'true'
