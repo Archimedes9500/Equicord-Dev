@@ -31,7 +31,7 @@ jobs:
               run: pnpm test
 
             - name: Test if web version compiles
-              run: pnpm buildWeb
+              run: pnpm buildWeb -- --dev
 
             - name: Test if plugin structure is valid
               run: pnpm generatePluginJson
