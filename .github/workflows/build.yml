@@ -33,10 +33,10 @@ jobs:
               run: pnpm install --frozen-lockfile
 
             - name: Build web
-              run: pnpm buildWebStandalone
+              run: pnpm buildWebStandalone -- --dev
 
             - name: Build
-              run: pnpm buildStandalone
+              run: pnpm buildStandalone -- --dev
 
             - name: Generate plugin lists
               run: |
