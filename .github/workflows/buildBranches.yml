@@ -52,11 +52,11 @@ jobs:
 
             - name: Build web
               if: github.ref_name != 'bun'
-              run: pnpm buildWebStandalone
+              run: pnpm buildWebStandalone -- --dev
 
             - name: Build
               if: github.ref_name != 'bun'
-              run: pnpm buildStandalone
+              run: pnpm buildStandalone -- --dev
 
             - name: Generate plugin lists
               if: github.ref_name != 'bun'
@@ -76,11 +76,11 @@ jobs:
 
             - name: Build web
               if: github.ref_name == 'bun'
-              run: bun run buildWebStandalone
+              run: bun run buildWebStandalone -- --dev
 
             - name: Build
               if: github.ref_name == 'bun'
-              run: bun run buildStandalone
+              run: bun run buildStandalone --  --dev
 
             - name: Generate plugin lists
               if: github.ref_name == 'bun'
